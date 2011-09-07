@@ -3,6 +3,5 @@ Ext.regModel("NewsFeed", {
     {name: "content", type: "string"},
     {name: "title", type: "string"},
     {name: "link", type: "string"}
-    
     ]
 });

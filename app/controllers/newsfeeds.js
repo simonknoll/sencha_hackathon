@@ -1,4 +1,5 @@
 Ext.regController("newsfeeds", {
+  
      show: function(list, record) {
         var details = this.render({
             xtype: 'newsfeed-show',
@@ -21,6 +22,7 @@ Ext.regController("newsfeeds", {
             direction: 'left'
         });
     },
+    
     list: function() {
 		if (!this.listPanel) {
             this.listPanel = this.render({
