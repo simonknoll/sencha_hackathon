@@ -9,12 +9,8 @@ Ext.regController("newsfeeds", {
                 }
             }
         });
-         
-	   
-
-	           	
-        }
-        	       
+            
+               
         details.query('#backButton')[0].on({
             tap: this.list,
             scope: this
