@@ -14,7 +14,15 @@ Hackaton.views.NewsFeedShow = Ext.extend(Ext.Panel, {
             items: {
                 text: 'Back',
                 ui: 'back',
-                itemId: 'backButton'
+                itemId: 'backButton',
+                handler: function(){
+                  Ext.dispatch({
+                    controller: 'newsfeeds',
+                    action: 'list'
+                  });
+                }
+                  
+    
             }            
         };
         

@@ -3,13 +3,18 @@ Ext.regController("feedsuppliers", {
 
   add: function(){
     console.log("opening form for adding feedsupplier");
-    var form = this.render({
+    var addform = this.render({
             xtype: 'feedsupplier-form',
             listeners: {
-                deactivate: function(details) {
-                    form.destroy();
+                deactivate: function(addform) {
+                    addform.destroy();
                 }
             }
+        });
+        
+        this.application.viewport.setActiveItem(addform, {
+            type: 'slide',
+            direction: 'left'
         });
   }
 

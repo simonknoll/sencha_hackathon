@@ -23,15 +23,16 @@ Hackaton.views.NewsFeedListPanel = Ext.extend(Ext.Panel, {
         
         this.dockedItems = [
         {
-            xtype: 'toolbar',
+          xtype: 'toolbar',
             dock: 'top',
             title: 'NewsFeeds',
             items: [
               {xtype: 'spacer'},
               {
-                text: 'Add Supplier',
-                ui: 'action',
                 itemId: 'addButton',
+                    iconCls: 'add', 
+                    iconMask: true,
+                    ui: 'plain',
                 handler: function(){
                    console.log("you clicked");
                    Ext.dispatch({

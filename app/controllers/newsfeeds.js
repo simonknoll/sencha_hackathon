@@ -9,13 +9,7 @@ Ext.regController("newsfeeds", {
                     details.destroy();
                 }
             }
-        });
-            
-               
-        details.query('#backButton')[0].on({
-            tap: this.list,
-            scope: this
-        });
+      });
         
         this.application.viewport.setActiveItem(details, {
             type: 'slide',
@@ -38,7 +32,7 @@ Ext.regController("newsfeeds", {
                 }
             });
                         
-            this.application.viewport.setActiveItem(this.listPanel);
+            this.application.viewport.setActiveItem(this.listPanel);       
         }
         else {
             this.listPanel.store.sort();
