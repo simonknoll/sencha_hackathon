@@ -10,6 +10,20 @@ Ext.regApplication({
     useHistory   : true,
     
     launch: function() {
+    	   Ext.regStore('supplierstore', {
+			model: 'Supplier',
+			sorters: [{
+				property: 'name',
+				direction: 'DESC'
+			}],
+			proxy: {
+				type: 'localstorage',
+				id: 'supplier-localstore'
+			},
+			data: [
+				{ title:'Golem', url: 'http://golem.de'}
+			]
+		});
         this.viewport = new Hackaton.Viewport({
         	application: this
         });
